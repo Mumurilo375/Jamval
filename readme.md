@@ -6,7 +6,11 @@
 ### Configuração
 1. Configure a variável $dbParams em src/core/Database.php.
 2. Crie o banco de dados.
-3. Execute o comando
+3. Instale as dependencias.
+```bash
+composer install
+```
+4. Crie as tabelas no banco de dados.
 ```bash
 composer create-db
 ```
@@ -18,7 +22,7 @@ Atualizar tabelas:
 composer update-db
 ```
 
-Executar o projeto
+Executar o projeto:
 ```bash
 composer start
 ```
