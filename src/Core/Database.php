@@ -1,6 +1,6 @@
 <?php
 
-namespace Jusce\Doctrine\core;
+namespace App\Core;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
@@ -28,7 +28,7 @@ class Database
 
     private static function getConfig(): Configuration
     {
-        $paths = [__DIR__ . '/../model'];
+        $paths = [__DIR__ . '/../Model'];
         $isDevMode = false;
 
         return ORMSetup::createAttributeMetadataConfiguration(
@@ -43,7 +43,7 @@ class Database
             'driver'   => 'pdo_mysql',
             'user'     => 'root',
             'password' => '123',
-            'dbname'   => 'exemplo',
+            'dbname'   => 'tadx',
             'host'     => '127.0.0.1'
         ];
 

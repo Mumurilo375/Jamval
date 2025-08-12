@@ -4,7 +4,7 @@
 - Mysql
 
 ### Configuração
-1. Configure a variável $dbParams em src/core/Database.php.
+1. Configure a variável $dbParams em src/Core/Database.php.
 2. Crie o banco de dados.
 3. Instale as dependencias.
 ```bash
