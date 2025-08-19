@@ -7,6 +7,7 @@ use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\Configuration;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\ORMSetup;
+use Dotenv\Dotenv;
 
 class Database
 {
@@ -39,14 +40,17 @@ class Database
 
     private static function getConnection(): Connection
     {
+        
+        $dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
+        $dotenv->load();
         $dbParams = [
-            'driver'   => 'pdo_mysql',
-            'user'     => 'root',
-            'password' => '123',
-            'dbname'   => 'tadx',
-            'host'     => '127.0.0.1'
+            'driver'   => $_ENV['DB_DRIVER'],
+            'user'     => $_ENV['DB_USER'],
+            'password' => $_ENV['DB_PASSWORD'],
+            'dbname'   => $_ENV['DB_DBNAME'],
+            'host'     => $_ENV['DB_HOST']
         ];
-
+        
         $config = self::getConfig();
 
         return DriverManager::getConnection(
