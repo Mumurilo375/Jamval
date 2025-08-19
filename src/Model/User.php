@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-class Agenda
+class User
 {
 
 }
