@@ -11,3 +11,4 @@ require __DIR__ . '/../vendor/autoload.php';
 ConsoleRunner::run(
     new SingleManagerProvider(Database::getEntityManager())
 );
+//a pasta bin serve para conversar com o doctrine
